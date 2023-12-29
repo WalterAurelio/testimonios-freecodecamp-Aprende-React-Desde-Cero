@@ -19,9 +19,9 @@ h1 {
 }
 
 .App {
-  min-height: 100vh; /* vh = viewport height, hace que .App tome como mínimo tome el 100% de la pantalla verticalmente */
+  min-height: 100vh;
   display: flex;
-  flex-wrap: wrap; /* con wrap, si un elemento toma todo el ancho del contenedor, los demás elementos se ubicarán en la siguiente fila */
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   text-align: center;

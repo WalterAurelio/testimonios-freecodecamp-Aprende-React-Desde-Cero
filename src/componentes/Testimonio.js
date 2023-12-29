@@ -1,26 +1,26 @@
-import React from 'react'
-import '../hojas-de-estilo/Testimonio.css'
+import React from 'react';
+import '../hojas-de-estilo/Testimonio.css';
 
 function Testimonio(props) {
   return (
     <div className="contenedor-testimonio">
       <img
         className="imagen-testimonio"
-        src={require('../imagenes/testimonio-emma.png')} // con require es la forma de obtener una imagen en JSX
+        src={require(`../imagenes/testimonio-${props.imagen}.png`)}
         alt="Foto de Emma"
       />
 
       <div className="contenedor-texto-testimonio">
         <p className="nombre-testimonio">
-          {props.nombre} en {props.pais}
+          <strong>{props.nombre}</strong> en {props.pais}
         </p>
         <p className="cargo-testimonio">
-          {props.cargo} en {props.empresa}
+          {props.cargo} en <strong>{props.empresa}</strong>
         </p>
-        <p className="texto-testimonio">{props.testimonio}</p>
+        <p className="texto-testimonio">"{props.testimonio}"</p>
       </div>
     </div>
-  ) // un commponente funcional de React retorna un elemento JSX
+  );
 }
 
-export default Testimonio
+export default Testimonio;
