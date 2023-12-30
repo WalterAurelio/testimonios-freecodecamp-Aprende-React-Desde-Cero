@@ -6,18 +6,19 @@ function Testimonio(props) {
     <div className="contenedor-testimonio">
       <img
         className="imagen-testimonio"
-        src={require(`../imagenes/testimonio-${props.imagen}.png`)}
-        alt="Foto de Emma"
+        src={require(`../imagenes/testimonio-${props.persona.imagen}.png`)}
+        alt={`Foto de ${props.persona.nombre}`}
       />
 
       <div className="contenedor-texto-testimonio">
         <p className="nombre-testimonio">
-          <strong>{props.nombre}</strong> en {props.pais}
+          <strong>{props.persona.nombre}</strong> en {props.persona.pais}
         </p>
         <p className="cargo-testimonio">
-          {props.cargo} en <strong>{props.empresa}</strong>
+          {props.persona.cargo} en <strong>{props.persona.empresa}</strong>
         </p>
-        <p className="texto-testimonio">"{props.testimonio}"</p>
+        {/* <p className="texto-testimonio">"{props.persona.testimonio}"</p> */}
+        {props.persona.testimonio()}
       </div>
     </div>
   );
